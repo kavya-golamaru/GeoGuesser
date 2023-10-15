@@ -1,10 +1,15 @@
+
 const Welcome = () => {
+    //write functions to make variables that will be passed into game component '
+   const photo = () => {
+    //set photo
+   }
   return (
     <div>
       <p>Welcome</p>
       <div>
         <a href="/Start">
-          <button>Next Page</button>
+          <button>Play</button>
         </a>
       </div>
     </div>
