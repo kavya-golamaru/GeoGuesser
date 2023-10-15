@@ -1,6 +1,6 @@
 import {useMemo, useState} from "react";
 import {useNavigate} from "react-router-dom";
-import "../globals.css";
+import "./styles.css";
 import {IMAGES} from "./constants.js";
 import {GoogleMap, useLoadScript, DistanceMatrixService} from "@react-google-maps/api";
 export default function MapElement({submit, distance, setDistance, count}) {

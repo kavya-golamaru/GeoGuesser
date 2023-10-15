@@ -50,3 +50,7 @@
   font-size: larger;
   font-weight: 5000;
 }
+.map-container {
+    width : 50%;
+    height : 50vh;
+}
