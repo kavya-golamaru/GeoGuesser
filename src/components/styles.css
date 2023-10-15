@@ -10,11 +10,18 @@
 
 .button-container {
     position: absolute;
-    left: 47%;
-    top: 56%;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    top: 125px; /* Adjust as needed */
+    left: 145px;
     height: 4vh; /* Adjust as needed for your layout */
   }
   
+.image-background {
+    background-image: url("../img/ggbackground.jpg");
+    background-size: cover; /* Adjust this property to control the image size */
+    background-attachment: fixed;
+  }
+
+.custom-image {
+    width: 200px; /* Set the desired width */
+    height: 150px; /* Set the desired height */
+  }

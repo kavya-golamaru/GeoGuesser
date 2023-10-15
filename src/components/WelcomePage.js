@@ -3,8 +3,9 @@ import './styles.css';
 const classNames = "large-text block-text";
 const centerTextStyles = {
   display: 'flex',
-  justifyContent: 'center', // Horizontally center
-  alignItems: 'center',     // Vertically center
+  position: 'relative', // Change this to 'absolute' or 'fixed' if needed
+  top: '250px',          // Adjust as needed
+  left: '750px',     // Vertically center
   height: '100vh',         // Adjust the height as needed
 };
 const Welcome = () => {
@@ -13,12 +14,15 @@ const Welcome = () => {
     //set photo
    }
   return (
-    <div style={centerTextStyles}>
-      <p className={classNames}>GeoGuesser</p>
-      <div>
-        <a href="/Start">
-          <button className="button-container">Click to Play!</button>
-        </a>
+    <div className="image-background">
+      <p> This is component with a background image.</p>
+      <div style={centerTextStyles}>
+        <p className={classNames}>GeoGuesser</p>
+        <div>
+          <a href="/Start">
+            <button className="button-container">Click to Play!</button>
+          </a>
+        </div>
       </div>
     </div>
   );
