@@ -7,6 +7,9 @@ const End = () => {
       <div>
         <p>Your score is {location.state.d}</p>
       </div>
+      <div>
+        <a href ="/"> <button>Back to Beginning</button></a>
+      </div>
     </div>
   );
 };

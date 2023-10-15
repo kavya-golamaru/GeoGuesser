@@ -23,11 +23,12 @@ export default function MapElement({submit, distance, setDistance, count}) {
         console.log("lat2", lat2);
         console.log("lon2", lon2);
         let temp = distance;
-        console.log(lat1, lon1+"==="+lat2, lon2)
-            let R = 6371  // km
+            let R = 6371000  // m
             let x1 = lat2 - lat1
+            console.log("x1", x1);
             let dLat = toRadian(x1)
             let x2 = lon2 - lon1
+            console.log("x2", x2);
             let dLon = toRadian(x2)
             let a =
               Math.sin(dLat / 2) * Math.sin(dLat / 2) +
@@ -37,7 +38,8 @@ export default function MapElement({submit, distance, setDistance, count}) {
             console.log("distance==?",d)
         temp = temp + d;
         let t = count + 1;
-        if (t === IMAGES.length) {
+        if (t === 8) {
+            //end after 8 images shown
             navigate("/end", {state:{d: temp}});
         }
         {setDistance(temp)}
