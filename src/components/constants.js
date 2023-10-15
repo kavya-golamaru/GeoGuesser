@@ -7,22 +7,26 @@ import tech4 from "../img/tech4.jpg"
         {
             id: 1,
             src: tech1,
-            location: "tech tower"
+            lat: 47,
+            lon: -88
         },
         {
             id: 2,
             src: tech2,
-            location: "skyline"
+            lat: 47,
+            lon: -48
         },
         {
             id: 3,
             src: tech3,
-            location: "student center"
+            lat: 47,
+            lon: -83
         },
         {
             id: 4,
             src: tech4,
-            location: "tech square"
+            lat: 47,
+            lon: -81
         }
     ];
 

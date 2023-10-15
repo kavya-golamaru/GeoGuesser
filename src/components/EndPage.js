@@ -5,7 +5,7 @@ const End = () => {
     <div>
       <p>End</p>
       <div>
-        <p>Your score is {location.state.score}</p>
+        <p>Your score is {location.state.d}</p>
       </div>
     </div>
   );
