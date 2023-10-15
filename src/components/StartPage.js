@@ -2,6 +2,7 @@ import React, { useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {IMAGES} from "./constants.js";
 import MapElement from "./map.js";
+import Mode from "./modal.js";
 const Start = () => {
     const navigate = useNavigate();
     const [count, setCount] = useState(0);
@@ -21,9 +22,6 @@ const Start = () => {
     </div>
     <div>
         <MapElement submit = {submit} distance = {distance} setDistance = {setDistance} count = {count}/>
-    </div>
-    <div>
-
     </div>
   </div>
   );

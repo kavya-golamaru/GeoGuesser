@@ -1,15 +1,60 @@
-import {useMemo, useState} from "react";
+import React, {useMemo, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import Modal from 'react-modal';
 import "./styles.css";
 import {IMAGES} from "./constants.js";
 import {GoogleMap, useLoadScript, DistanceMatrixService} from "@react-google-maps/api";
+import Mode from "./modal.js";
 export default function MapElement({submit, distance, setDistance, count}) {
+    const customStyles = {
+    content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+    },
+    };
     const navigate = useNavigate();
-    const [route, setRoute] = useState([]);
+    let d = 0;
+    const [isOpen, setIsOpen] = React.useState(false);
+    let subtitle;
+
+      function openModal() {
+        setIsOpen(true);
+      }
+
+      function afterOpenModal() {
+        // references are now sync'd and can be accessed.
+        subtitle.style.color = '#f00';
+      }
+
+      function closeModal() {
+        setIsOpen(false);
+      }
+
     const {isLoaded} = useLoadScript({googleMapsApiKey: "AIzaSyDDL4QPQKGbitbTDArh2lu7lg-2JFmoAsk",
     });
     if(!isLoaded) return <div>Load</div>
-    return (<Map />);
+    return (
+    <div>
+    <Map />
+    <div>
+          <Modal
+            isOpen={isOpen}
+            onAfterOpen={afterOpenModal}
+            onRequestClose={closeModal}
+            style={customStyles}
+            contentLabel="Distance Off"
+          >
+            <h2 ref={(_subtitle) => (subtitle = _subtitle)}>Distance Off</h2>
+            <div><p>You were {distance} meters off on this guess</p></div>
+            <button onClick={closeModal}>close</button>
+          </Modal>
+        </div>
+    </div>
+    );
     function Map() {
         return (<GoogleMap onClick = {(e) => handleClick(e)} zoom={18} center={{lat:33.7742804, lng:-84.3958565}} mapContainerClassName="map-container"></GoogleMap>);
     }
@@ -34,8 +79,10 @@ export default function MapElement({submit, distance, setDistance, count}) {
               Math.sin(dLat / 2) * Math.sin(dLat / 2) +
               Math.cos(toRadian(lat1)) * Math.cos(toRadian(lat2)) * Math.sin(dLon / 2) * Math.sin(dLon / 2)
             let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a))
-            let d = R * c
+            d = R * c
             console.log("distance==?",d)
+            setIsOpen(true);
+
         temp = temp + d;
         let t = count + 1;
         if (t === 8) {
