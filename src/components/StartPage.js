@@ -2,6 +2,13 @@ import React, { useState} from "react";
 import {useNavigate} from "react-router-dom";
 import {IMAGES} from "./constants.js";
 import MapElement from "./map.js";
+const mapStyles = {
+  position: 'relative',  // Adjust to 'absolute' or 'fixed' as needed
+  top: '50px',          // Adjust the top position
+  left: '350px',         // Adjust the left position
+  width: '1600px',       // Adjust the width
+  height: '450px',      // Adjust the height
+};
 const Start = () => {
     const navigate = useNavigate();
     const [count, setCount] = useState(0);
@@ -17,9 +24,9 @@ const Start = () => {
   return (
   <div>
     <div>
-        <img src ={source}/>
+        <img src ={source} className="geo-image"/>
     </div>
-    <div>
+    <div style={mapStyles}>
         <MapElement submit = {submit} distance = {distance} setDistance = {setDistance} count = {count}/>
     </div>
     <div>

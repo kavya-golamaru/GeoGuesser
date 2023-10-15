@@ -15,7 +15,6 @@ const Welcome = () => {
    }
   return (
     <div className="image-background">
-      <p> This is component with a background image.</p>
       <div style={centerTextStyles}>
         <p className={classNames}>GeoGuesser</p>
         <div>

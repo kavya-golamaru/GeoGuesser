@@ -18,6 +18,9 @@ export default function MapElement({submit, distance, setDistance, count}) {
         var lat1 = event.latLng.lat();
         var lon1 = event.latLng.lng();
         const image =  IMAGES[count];
+        console.log(IMAGES);
+        console.log(count);
+        console.log(image);
         const lat2 = image.lat;
         const lon2 = image.lon;
         console.log("lat2", lat2);
