@@ -9,12 +9,13 @@ const Start = () => {
     const [answer, setAnswer] = useState("");
 
     const submit = (event) => {
+       let temp = score;
         event.preventDefault();
         const image = IMAGES[count];
         const loc = image.location;
         if (answer === loc) {
             console.log("correct");
-            let temp = score + 1
+            temp = temp + 1
             setScore(temp);
         }
         setAnswer("");
@@ -22,7 +23,7 @@ const Start = () => {
         let t = count + 1;
         setCount(t);
         if (t === IMAGES.length) {
-            navigate("/end", {state:{score: score}});
+            navigate("/end", {state:{score: temp}});
         }
     }
     const changeAnswer = (event) => {
