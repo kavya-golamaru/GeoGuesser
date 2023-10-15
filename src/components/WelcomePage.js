@@ -8,7 +8,7 @@ const Welcome = () => {
     <div>
       <p>Welcome</p>
       <div>
-        <a href="/Start">
+        <a href="/play">
           <button>Play</button>
         </a>
       </div>

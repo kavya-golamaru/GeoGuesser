@@ -4,12 +4,13 @@ import Game from "./GamePage.js"
 const Start = () => {
     const [score, setScore] = useState(0);
     const [count, setCount] = useState(0);
-    const [correct, setCorrect] = useState("tech tower");
     const [answer, setAnswer] = useState("");
 
     const submit = (event) => {
         event.preventDefault();
-        if (answer === correct) {
+        const image = IMAGES[count];
+        const loc = image.location;
+        if (answer === loc) {
             console.log("correct");
             let temp = score + 1
             setScore(temp);
@@ -18,10 +19,6 @@ const Start = () => {
         console.log("wrong");
         let t = count + 1;
         setCount(t);
-        const image = IMAGES[t];
-        const loc = image.location;
-        setCorrect(loc);
-
     }
     const changeAnswer = (event) => {
         setAnswer(event.target.value);
