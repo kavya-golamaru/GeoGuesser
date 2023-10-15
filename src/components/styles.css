@@ -25,3 +25,23 @@
     width: 200px; /* Set the desired width */
     height: 150px; /* Set the desired height */
   }
+
+.answer {
+    position: absolute;
+    top: 500px;
+    left: 300px;
+}
+
+.check {
+    position: absolute;
+    top: 540px;
+    left: 410px;
+}
+
+.score {
+  position: absolute;
+  top: 50px;
+  left: 1100px;
+  font-size: larger;
+  font-weight: 5000;
+}

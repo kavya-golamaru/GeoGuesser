@@ -9,17 +9,17 @@ const Game = ({count, score, submit, changeAnswer, answer}) => {
         </div>
         <div>
             <form onSubmit={submit}>
-                <div>
-                    <label>Answer</label>
+                <div className="answer">
+                    <label>Answer: </label>
                     <input value = {answer} onChange ={changeAnswer}></input>
                 </div>
-                <div>
+                <div className="check">
                     <button type="submit">Check</button>
                 </div>
             </form>
         </div>
-        <div>
-            <p> Score is {score}</p>
+        <div className="score">
+            <p> Score: {score}</p>
         </div>
     </div>
   )
