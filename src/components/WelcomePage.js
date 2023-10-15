@@ -15,9 +15,8 @@ const Welcome = () => {
    }
   return (
     <div className="image-background">
-      <p> This is component with a background image.</p>
       <div style={centerTextStyles}>
-        <p className={classNames}>GeoGuesser</p>
+        <p className={classNames}>GeoTech-er</p>
         <div>
           <a href="/play">
             <button className="button-container">Click to Play!</button>
