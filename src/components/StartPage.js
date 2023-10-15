@@ -1,7 +1,9 @@
-import {useState} from "react";
+import React, { useState} from "react";
+import {useNavigate} from "react-router-dom";
 import {IMAGES} from "./constants.js"
 import Game from "./GamePage.js"
 const Start = () => {
+    const navigate = useNavigate();
     const [score, setScore] = useState(0);
     const [count, setCount] = useState(0);
     const [answer, setAnswer] = useState("");
@@ -19,6 +21,9 @@ const Start = () => {
         console.log("wrong");
         let t = count + 1;
         setCount(t);
+        if (t === IMAGES.length) {
+            navigate("/end", {state:{score: score}});
+        }
     }
     const changeAnswer = (event) => {
         setAnswer(event.target.value);
