@@ -1,0 +1,20 @@
+.large-text {
+    font-size: 55px;
+}
+
+.block-text {
+    font-family: "fantasy", sans-serif; /* Replace 'YourBlockFont' with the actual font family name. */
+    text-transform: uppercase; /* Convert text to uppercase for a block letter effect. */
+    letter-spacing: 2px; /* Adjust letter spacing as needed. */
+  }
+
+.button-container {
+    position: absolute;
+    left: 47%;
+    top: 56%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 4vh; /* Adjust as needed for your layout */
+  }
+  
