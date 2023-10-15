@@ -1,10 +1,11 @@
+
 const Welcome = () => {
   return (
     <div>
       <p>Welcome</p>
       <div>
-        <a href="/Start">
-          <button>Next Page</button>
+        <a href="/play">
+          <button>Play</button>
         </a>
       </div>
     </div>
