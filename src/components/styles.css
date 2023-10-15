@@ -67,3 +67,8 @@
     height: 4vh; /* Adjust as needed for your layout */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+.map-container {
+    width: 50%;
+    height: 50vh;
+}
