@@ -4,7 +4,6 @@ import Modal from 'react-modal';
 import "./styles.css";
 import {IMAGES} from "./constants.js";
 import {GoogleMap, useLoadScript, DistanceMatrixService} from "@react-google-maps/api";
-import Mode from "./modal.js";
 export default function MapElement({submit, distance, setDistance, count}) {
     const customStyles = {
     content: {
