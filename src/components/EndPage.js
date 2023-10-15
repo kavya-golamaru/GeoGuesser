@@ -1,11 +1,12 @@
 import {useLocation} from "react-router-dom";
+import game_over from "../img/game_over.jpeg";
 const End = () => {
     const location = useLocation();
   return (
     <div>
-      <p>End</p>
+      <img src={game_over} alt="Game Over" className="custom-image" />
       <div>
-        <p>Your score is {location.state.d}</p>
+        <p>The total distance you were off by is {location.state.d} meters</p>
       </div>
     </div>
   );
