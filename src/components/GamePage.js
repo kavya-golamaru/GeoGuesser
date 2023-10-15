@@ -1,10 +1,11 @@
-import tech1 from "../img/tech1.jpg";
-import tech2 from "../img/tech2.jpg";
-const Game = ({count, score, photoSource, submit, changeAnswer, answer}) => {
+import {IMAGES} from "./constants.js";
+const Game = ({count, score, submit, changeAnswer, answer}) => {
+    const image = IMAGES[count];
+    const source = image.src;
   return (
     <div>
         <div>
-            <img src = {photoSource}/>
+            <img src = {source}/>
         </div>
         <div>
             <form onSubmit={submit}>
